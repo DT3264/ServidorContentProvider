@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BaseDeDatosLocalConRoomA">
         <activity
+            android:name=".ActividadContentProvider"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -18,6 +21,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <provider
+            android:authorities="net.ivanvega.basededatoslocalconrooma.provider"
+            android:name="net.ivanvega.basededatoslocalconrooma.provider.MiContentProvider"
+            android:exported="true"/>
+
     </application>
 
 </manifest>
